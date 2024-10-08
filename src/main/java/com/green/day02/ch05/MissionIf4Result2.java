@@ -5,31 +5,22 @@ public class MissionIf4Result2 {
         int score = (int)(Math.random() * 101.0); //0이상 100이하의 랜덤값 나올 수 있도록 세팅
         System.out.printf("score: %d\n", score);
 
-        char grade, opt = '0';
+        char grade = 'D', opt = '0';
 
         if(score >= 90) {
             grade = 'A';
-            if(score >= 98) {
-                opt = '+';
-            } else if(score < 94) {
-                opt = '-';
-            }
+            if(score >= 98) { opt = '+'; }
+            else if(score < 94) {  opt = '-'; }
         } else if(score >= 80) {
             grade = 'B';
-            if(score >= 88) {
-                opt = '+';
-            } else if(score < 84) {
-                opt = '-';
-            }
+            if(score >= 88) { opt = '+'; }
+            else if(score < 84) { opt = '-'; }
         } else if(score >= 70) {
             grade = 'C';
-            if(score >= 78) {
-                opt = '+';
-            } else if(score < 74) {
-                opt = '-';
-            }
+            if(score >= 78) { opt = '+'; }
+            else if(score < 74) { opt = '-'; }
         } else {
-            grade = 'D';
+            opt = ' ';
         }
         System.out.printf("%c%c\n", grade, opt);
         /*
