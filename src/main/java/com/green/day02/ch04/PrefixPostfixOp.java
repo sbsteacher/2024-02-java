@@ -13,8 +13,16 @@ public class PrefixPostfixOp {
         n--; //감소 연산자
         System.out.printf("5 - n: %d\n", n);
         /*
+            증가/감소 연산자는 대입 연산자가 없지만 변수의 값이 변경이 된다.
             증가 연산자 사용시 쓰기만 한다면 pre, post차이가 없다.
-            증가 연산자 사용시 쓰기/읽기를 둘다 해야한다면 pre, post차이가 생긴다.
+            증가 연산자 사용시 쓰기/읽기를 둘 다 해야한다면 pre, post차이가 생긴다.
          */
+        System.out.println("---------------");
+        int n2 = 10, n3 = 10;
+        System.out.printf("n2++: %d\n", n2++);
+        System.out.printf("n2: %d\n", n2);
+        System.out.println();
+        System.out.printf("++n3: %d\n", ++n3);
+        System.out.printf("n3: %d\n", n3);
     }
 }
