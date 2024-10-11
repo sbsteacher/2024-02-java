@@ -2,9 +2,9 @@ package com.green.day04.ch05;
 
 public class MissionForInFor5Result2 {
     public static void main(String[] args) {
-        //int star = (int)(Math.random() * 6.0) + 3;
-        int star = 3;
-
+        int star = (int)(Math.random() * 6.0) + 3;
+        //int star = 3;
+        System.out.println("star: " + star);
         for(int i=1; i<=star; i++) {
             for(int z=star; z>i; z--) {
                 System.out.print("_");
