@@ -10,7 +10,7 @@ public class MethodStudy {
     아래 4가지가 메소드 구성요소
     void: 리턴타입: 메소드 호출된 후 결과값
     main: 메소드명: 호출할 때 사용
-    (String[] asrgs): 파라미터, 매개변수: 메소드에 보내는 데이터
+    (String[] asrgs): 파라미터, 매개변수: 메소드를 호출할 때 메소드에 보내는 데이터
     {}: 구현부: 호출되었을 때 실행되는 부분
 
     (리턴타입 + 메소드명 + 파라미터): 선언부
@@ -22,7 +22,7 @@ public class MethodStudy {
 
      */
     public static void main(String[] args) {
-        sum(5, 7); //sum메소드 호출
+        sum(5, 7); //sum메소드 호출, 메소드에 보내는 값은 아규먼트(인자)
         sum(15, 17); //sum메소드 호출
         int result = returnSum(5, 7);
         System.out.println("result: " + result);
