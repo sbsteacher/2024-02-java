@@ -2,6 +2,7 @@ package com.green.day05.ch06;
 
 //Parameter
 public class Method2Param {
+
     static void hiEveryone(int age, double height) {
         System.out.println("제 나이는 " + age + "세 입니다.");
         System.out.println("저의 키는 " + height + "cm 입니다.");

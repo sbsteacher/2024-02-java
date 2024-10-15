@@ -3,7 +3,7 @@ package com.green.day05.ch06;
 //지역 변수
 public class LocalVariable {
 
-    static int aaa = 11;
+    static int aaa = 11; //전역변수
 
     /*
         Scope(스코프): 변수가 살아있는 범위
