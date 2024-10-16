@@ -8,10 +8,12 @@ package com.green.day06.ch07;
 public class PrimitiveVsReferenceTest {
     public static void main(String[] args) {
         int num = 10;
+        Integer num2 = num;
         changeNum(num);
         System.out.println("num: " + num); //10
 
         NumberBox nb = new NumberBox();
+
         nb.num = 10;
         changeNum(nb);
         System.out.println("nb.num: " + nb.num); //100
@@ -22,7 +24,7 @@ public class PrimitiveVsReferenceTest {
     m-nb를 통해 객체의 num값을 변경을 했다면 main-nb를 통해 접근했을 때 변경된 값을 얻게 된다.
     */
     public static void changeNum(NumberBox nb) {
-        nb = new NumberBox();
+        //nb = new NumberBox();
         nb.num = 100;
     }
 

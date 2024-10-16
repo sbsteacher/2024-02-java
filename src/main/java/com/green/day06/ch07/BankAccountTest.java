@@ -4,6 +4,7 @@ public class BankAccountTest {
     public static void main(String[] args) {
         //BankAccount.deposit(4000);
         //ba는 BankAccount 객체 주소값만 담을 수 있는 참조변수이다.
+        //참조변수, 주소값,
         BankAccount ba = new BankAccount();
         ba.deposit(1000);
         ba.checkMyBalance();

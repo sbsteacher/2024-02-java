@@ -26,8 +26,9 @@ public class PassingRef {
         //PassingRef pf = new PassingRef();
         //pf.check(ba);
 
-        //1. void, return
-        //2. static, non-static
+        //check(ba)호출을 보고 알 수 있는 정보
+        //1. (void)
+        //2. (static)
     }
 
     static void check(BankAccount ba) {
