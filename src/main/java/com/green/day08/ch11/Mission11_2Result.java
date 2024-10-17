@@ -2,7 +2,13 @@ package com.green.day08.ch11;
 
 public class Mission11_2Result {
     public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("990925-101299");
+        //sb.replace(6, 7, " ");
+        int dashIdx = sb.indexOf("-");
+        System.out.println("dashIdx: " + dashIdx);
+        sb.replace(dashIdx, dashIdx + 1, " ");
 
+        System.out.println(sb);
     }
     /*
     다음 주민등록 번호의 중간에 삽인된 '-'를 지우고 공백으로 채워서
@@ -12,8 +18,6 @@ public class Mission11_2Result {
 
     990925-101299
 
-
     콘솔에 990925 101299 가 출력이 되면 된다.
      */
-
 }
