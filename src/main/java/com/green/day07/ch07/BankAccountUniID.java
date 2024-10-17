@@ -24,6 +24,8 @@ class BankAccount {
         System.out.printf("주민번호: %s\n", ssNumber);
         System.out.printf("잔   액: %,d\n", balance);
     }
+
+
 }
 
 public class BankAccountUniID {

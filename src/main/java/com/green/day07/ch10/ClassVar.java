@@ -13,6 +13,7 @@ public class ClassVar {
 class InstCnt {
     static int instNum;
     int value;
+
     InstCnt() {
         instNum++;
         value++;

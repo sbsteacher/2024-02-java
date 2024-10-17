@@ -47,6 +47,11 @@ public class StringStudy {
         int n = 10;
         String str9 = n + "";
         String str10 = String.valueOf(n); //모든 타입을 String으로 변경할 수 있다.
+
+        System.out.println("------------------------------");
+        String str11 = "abcdefgcd";
+        String str11Result = str11.replace("cd", "CD");
+        System.out.println("str11Result: " + str11Result);
     }
 
 
