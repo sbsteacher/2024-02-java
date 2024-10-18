@@ -11,6 +11,8 @@ public class ShuffleArray {
         }
 
         //0 ~ 19 랜덤값
+        //rIdx가 가리키는 공간과 i가 가리키는 공간의 값을 swapp해주세요.
+        //20번 반복하면 값이 섞이게 된다.
         for(int i=0; i<arr.length; i++) {
             int rIdx = (int)(Math.random() * arr.length);
             int temp = arr[i];
