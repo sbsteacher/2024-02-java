@@ -22,8 +22,13 @@ public class MissionTwoDimenArrayToObject {
     }
 
     public static void printTotalSubjectScore(Student[] students) {
-
-        System.out.printf("학급 - 합계점수: %d, 평균점수: %.1f\n");
+        int totalSum = 0;
+        for(Student item : students) {
+            totalSum += item.getAllScore();
+        }
+        float totalAvg = (float)totalSum / (students.length * Student.SUBJECT_CNT);
+        System.out.printf("학급 - 합계점수: %d, 평균점수: %.1f\n"
+                , totalSum, totalAvg);
     }
 
     public static void printTotalMathScore(Student[] students) {
