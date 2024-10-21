@@ -8,6 +8,9 @@ public class Mission13_2_2Result {
                 {1, 2, 3},
                 {4, 5, 6},
                 {7, 8, 9},
+                {1, 1, 1},
+                {2, 2, 2},
+                {3, 3, 3},
         };
         arrayChangeOrder(arr);
         System.out.println(Arrays.deepToString(arr));
