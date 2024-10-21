@@ -31,8 +31,26 @@ public class Mission13_2_1 {
 
         addOneDArr(arr, 5); //두번째 인자의 값을 모든 방에 더해준다.
         System.out.println(Arrays.toString(arr)); // [ 4, 5, 6, 7, 8 ]
-
-
+        System.out.println("--------------");
+        int[][] arr2 = {
+                {1, 2, 3},
+                {4, 5, 6},
+        };
+        addTwoDArr(arr2, 3); //메소드 재활용성을 극대화 시킨다.
+        System.out.println(Arrays.deepToString(arr2));
+//        for(int[] item : arr2) {
+//            System.out.println(Arrays.toString(item));
+//        }
+    }
+    //int[] 객체의 각 방의 타입: int
+    //int[][] 객체의 각 방의 타입: int[]
+    public static void addTwoDArr(int[][] arr, int add) {
+        for(int z=0; z<arr.length; z++) {
+            addOneDArr(arr[z], add);
+//            for(int i=0; i<arr[z].length; i++) {
+//                arr[z][i] = arr[z][i] + add;
+//            }
+        }
     }
 
     public static void addOneDArr(int[] arr, int add) {
