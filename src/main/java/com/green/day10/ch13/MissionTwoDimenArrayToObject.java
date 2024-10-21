@@ -11,13 +11,55 @@ public class MissionTwoDimenArrayToObject {
         System.out.println(youngSu.getKorScore() + youngSu.getEngScore() + youngSu.getMathScore());
         System.out.println(youngSu.getAllScore());
         System.out.println("---------------");
-        for(Student stu : arr) {
+
+        printStudentsInfo(arr);
+        printTotalKorScore(arr); //국어 - 합계점수 ?, 평균점수 ?
+        //같은 class, static, void
+
+        printTotalEngScore(arr);
+        printTotalMathScore(arr);
+    }
+
+    public static void printTotalMathScore(Student[] students) {
+        int sum = 0;
+        for(Student item : students) {
+            sum += item.getMathScore();
+        }
+        float avg = (float)sum / students.length;
+        System.out.printf("수학 - 합계점수 %d, 평균점수 %.1f\n"
+                , sum, avg);
+    }
+
+    public static void printTotalEngScore(Student[] students) {
+        int sum = 0;
+        for(Student item : students) {
+            sum += item.getEngScore();
+        }
+        float avg = (float)sum / students.length;
+        System.out.printf("영어 - 합계점수 %d, 평균점수 %.1f\n"
+                , sum, avg);
+    }
+
+    public static void printTotalKorScore(Student[] students) {
+        int totalKorScore = 0;
+        for(Student item : students) {
+            totalKorScore += item.getKorScore();
+        }
+        float avgKorScore = (float)totalKorScore / students.length;
+        System.out.printf("국어 - 합계점수 %d, 평균점수 %.1f\n"
+                , totalKorScore, avgKorScore);
+    }
+
+
+    public static void printStudentsInfo(Student[] students) {
+        for(Student stu : students) {
             System.out.println(stu);
         }
     }
 }
 
 class Student {
+    public static final int SUBJECT_CNT = 3;
     private String name;
     private int korScore; //국어 점수
     private int engScore; //영어 점수
@@ -54,7 +96,7 @@ class Student {
     public String toString() {
         int totalScore = getAllScore();
         return String.format("%s - 국어: %d, 영어: %d, 수학: %d | 합계점수: %d, 평균점수 %.1f"
-                      , name, korScore, engScore, mathScore, totalScore, (float)totalScore / 3);
+                      , name, korScore, engScore, mathScore, totalScore, (float)totalScore / SUBJECT_CNT);
     }
 
 }
