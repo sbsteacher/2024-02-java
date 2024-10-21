@@ -9,6 +9,11 @@ public class MissionTwoDimenArrayToObject {
 
         Student youngSu = arr[0];
         System.out.println(youngSu.getKorScore() + youngSu.getEngScore() + youngSu.getMathScore());
+        System.out.println(youngSu.getAllScore());
+        System.out.println("---------------");
+        for(Student stu : arr) {
+            System.out.println(stu);
+        }
     }
 }
 
@@ -44,4 +49,12 @@ class Student {
     public int getAllScore() {
         return korScore + engScore + mathScore;
     }
+
+    @Override
+    public String toString() {
+        int totalScore = getAllScore();
+        return String.format("%s - 국어: %d, 영어: %d, 수학: %d | 합계점수: %d, 평균점수 %.1f"
+                      , name, korScore, engScore, mathScore, totalScore, (float)totalScore / 3);
+    }
+
 }
