@@ -10,7 +10,9 @@ public class EnhancedForInst {
         arr[3] = new Product("Dress", 400_000);
 
         //미니 미션 아래 포맷처럼 출력되도록 해주세요.
-        //System.out.println(arr[0]); //제품명:Coffee, 가격:5000원
+        System.out.println(arr[0]); //제품명:Coffee, 가격:5000원
+        System.out.println(arr[0].toString()); //제품명:Coffee, 가격:5000원
+        System.out.println("-------------");
 
         /*
         enhanced-for문을 사용하여 제품명, 가격을 콘솔에 출력하고
@@ -56,6 +58,8 @@ class Product {
         return price;
     }
 
+    //오버라이딩 (Overriding)
+    @Override //애노테이션, 오버라이드 애노테이션을 작성하면 실수방지 기능이 있다.
     public String toString() {
         //return "제품명: " + name + ", 가격: " + price + "원";
         return String.format("제품명: %s, 가격: %,d원"
