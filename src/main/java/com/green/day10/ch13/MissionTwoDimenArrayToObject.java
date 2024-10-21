@@ -18,6 +18,12 @@ public class MissionTwoDimenArrayToObject {
 
         printTotalEngScore(arr);
         printTotalMathScore(arr);
+        printTotalSubjectScore(arr); //학급 - 합계점수 ?, 평균점수 ?
+    }
+
+    public static void printTotalSubjectScore(Student[] students) {
+
+        System.out.printf("학급 - 합계점수: %d, 평균점수: %.1f\n");
     }
 
     public static void printTotalMathScore(Student[] students) {
@@ -26,8 +32,7 @@ public class MissionTwoDimenArrayToObject {
             sum += item.getMathScore();
         }
         float avg = (float)sum / students.length;
-        System.out.printf("수학 - 합계점수 %d, 평균점수 %.1f\n"
-                , sum, avg);
+        System.out.printf("수학 - 합계점수 %d, 평균점수 %.1f\n", sum, avg);
     }
 
     public static void printTotalEngScore(Student[] students) {
@@ -36,8 +41,7 @@ public class MissionTwoDimenArrayToObject {
             sum += item.getEngScore();
         }
         float avg = (float)sum / students.length;
-        System.out.printf("영어 - 합계점수 %d, 평균점수 %.1f\n"
-                , sum, avg);
+        System.out.printf("영어 - 합계점수 %d, 평균점수 %.1f\n", sum, avg);
     }
 
     public static void printTotalKorScore(Student[] students) {
