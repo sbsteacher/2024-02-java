@@ -11,6 +11,7 @@ public class TwoDimenArray {
         };
 
 
+
         /*
         arr, arr3의 각 방의 타입은 int[] (int 1차원 배열)이다.
          */
@@ -18,6 +19,7 @@ public class TwoDimenArray {
         System.out.println("arr3.length: " + arr3.length);
 
         int[] tmp1 = arr3[0];
+        tmp1[2] = 100;
         System.out.println("tmp1[2]: " + tmp1[2]);
         System.out.println("arr3[0][2]: " + arr3[0][2]);
 

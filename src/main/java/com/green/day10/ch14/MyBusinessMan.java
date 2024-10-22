@@ -18,6 +18,8 @@ public class MyBusinessMan {
         man1.whatIsDoing();
         //man1.super.jump(); //외부에서 this, super 사용할 수 없다. (상속 관계 내부에서 사용)
 
+        Man man2 = new Man("김대리");
+        man2.jump();
     }
 }
 
@@ -28,6 +30,7 @@ class Man {
     private String name;
 
     public Man(String name) {
+        super(); //생략해도 자동으로 추가된다.
         this.name = name;
     }
 
