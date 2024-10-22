@@ -23,9 +23,18 @@ public class MyFriends2 {
         arr3[0].showInfo();
         //arr3[4].showInfo(); //null point exception 발생!!!
 
+        System.out.println("-------------------");
         //반복문으로 arr3에 객체주소값이 있는 친구들만 showInfo() 메소드 호출
-
-
+        for(int i=0; i<arr3.length; i++) {
+            Friend item = arr3[i];
+            if(item == null) {
+                continue;
+            }
+            item.showInfo();
+            System.out.println();
+        }
+        // main 메소드는 수정 금지!!!
+        // 이름, 전화번호 + 대학친구는 전공도 출력, 직장동료는 부서 출력
     }
 }
 
@@ -57,7 +66,7 @@ class Friend {
 class UnivFriend2 extends Friend {
     private String major;
 
-    UnivFriend2(String name, String phone, String major) {
+    UnivFriend2(String name, String major, String phone) {
         super(name, phone);
         this.major = major;
     }
@@ -65,19 +74,33 @@ class UnivFriend2 extends Friend {
     public String getMajor() {
         return major;
     }
+
+    @Override
+    public void showInfo() {
+//        System.out.println("이름: " + name);
+//        System.out.println("전화: " + phone);
+        super.showInfo();
+        System.out.println("전공: " + major);
+    }
 }
 
 //CompFriend와 같은 능력이 있는 2를 만들어주세요.
 class CompFriend2 extends Friend {
     private String department;
 
-    public CompFriend2(String name, String phone, String department) {
+    public CompFriend2(String name, String department, String phone) {
         super(name, phone);
         this.department = department;
     }
 
     public String getDepartment() {
         return department;
+    }
+
+    @Override
+    public void showInfo() {
+        super.showInfo();
+        System.out.println("부서: " + department);
     }
 }
 
