@@ -4,10 +4,13 @@ public class OverridingEquals {
     public static void main(String[] args) {
         String s1 = new String("10");
         String s2 = new String("10");
-        System.out.println("s1.equals(s2) : " + s1.equals(s2));
-
         NumBox n1 = new NumBox(10);
         NumBox n2 = new NumBox(10);
+
+        System.out.println("s1 == s2 : " + (s1 == s2));
+        System.out.println("s1.equals(s2) : " + s1.equals(s2));
+        System.out.println("s1.equals(n1) : " + s1.equals(n1));
+
 
         System.out.println("n1: " + n1);
         System.out.println("n2: " + n2);
@@ -18,6 +21,7 @@ public class OverridingEquals {
         System.out.println( "n1 == n2: " + (n1 == n2) );
         //NumBox객체가 서로 같은 값을 가지고 있으면 true 뜨도록 해주세요.
         System.out.println( "n1.equals(n2): " + n1.equals(n2) ); //false >> true
+        System.out.println( "n1.equals(n2): " + n1.equals(s1) ); //false
     }
 }
 
@@ -31,6 +35,10 @@ class NumBox {
     @Override
     public boolean equals(Object object) {
         return false;
+    }
+
+    int getNum() {
+        return num;
     }
 
     @Override

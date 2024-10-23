@@ -17,6 +17,8 @@ public class PolyStudy {
         Cat cat = new Cat();
         cat.crying(); //야옹 야옹
 
+        //Cat cat2 = new Dog(); //형제관계도 형변환 안된다.
+
         System.out.println("--------------------");
         //1번 검증
         Animal ani1 = new Cat();
@@ -24,9 +26,10 @@ public class PolyStudy {
         Animal ani3 = new BullDog();
         Animal ani4 = new Bird();
         Dog dog1 = new BullDog();
+        Animal ani5 = dog1;
 
         //2번 검증
-        //BullDog bullDog1 = new Dog(); //불가 - 컴파일 에러 발생
+        // BullDog bullDog1 = new Dog(); //불가 - 컴파일 에러 발생
         // BullDog bullDog2 = (BullDog)ani2;
         // ani2에는 Dog객체 주소값이 저장되어 있음.
         // 자식타입인 BullDog에 부모객체인 Dog객체 주소값을 담으려고 하니
@@ -48,10 +51,11 @@ public class PolyStudy {
 
 
         //3번 검증
-        // ani3.jump(); //ani3에는 BullDog객체 주소값이 저장되어 있으나
+        //ani3.jump(); //ani3에는 BullDog객체 주소값이 저장되어 있으나
         // Animal은 jump메소드를 모르기 때문에(존재하지않기 때문에) 호출할 수 없다.
         ((BullDog)ani3).jump();
         BullDog bullDog4 = (BullDog) ani3;
+        System.out.println("ani3 == bullDog4 : " + (ani3 == bullDog4));
         bullDog4.jump();
 
         System.out.println("============");
@@ -61,16 +65,48 @@ public class PolyStudy {
 
         //instanceof: 형변환 가능여부, 가능 true, 불가능 false
         //왼쪽항 객체주소값 오른쪽항 타입(Class)
-        //가능: 타입과 동일한 객체이거나 자식 객체
+        //가능: 타입 기준에서 봤을 때 동일한 객체이거나 자식 객체
         //불가능: 가능의 반대
+
+        ((BullDog)ani3).lay();
+        ((Dog)ani3).lay();
+
+        BullDog bullDog2 = new BullDog();
+        Dog dog = (Dog)ani3;
 
         System.out.println(ani3 instanceof BullDog); //true
         System.out.println(ani3 instanceof Dog); //true
         System.out.println(ani4 instanceof BullDog); //false
         System.out.println(ani4 instanceof Bird); //true
 
+
+        Cat cat2 = new Cat();
+        Dog dog2 = new Dog();
+        BullDog bullDog = new BullDog();
+        Bird bird = new Bird();
+
+        //동물을 울려주세요.
+        //PolyStudy 아래에 있는 메소드
+        //void
+        //static
+        //파라미터는 1개
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>");
+        animalCrying(cat2); //야옹~ 야옹~
+        animalCrying(dog2); //멍! 멍!
+        animalCrying(bullDog); //월~ 월~, jump() 메소드 호출
+        animalCrying(bird); //까악~ 까악~
+
         System.out.println("-- 끝 --");
     }
+
+    static void animalCrying(Animal ani) {
+        ani.crying();
+        if(ani instanceof BullDog) {
+            BullDog bullDog = (BullDog)ani;
+            bullDog.jump();
+        }
+    }
+
 }
 
 class Animal {
@@ -90,6 +126,10 @@ class Dog extends Animal {
     @Override
     void crying() {
         System.out.println("멍! 멍!");
+    }
+
+    void lay() {
+        System.out.println("강아지가 눕는다.");
     }
 }
 class BullDog extends Dog {

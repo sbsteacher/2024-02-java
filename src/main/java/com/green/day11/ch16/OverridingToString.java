@@ -4,17 +4,18 @@ public class OverridingToString {
     public static void main(String[] args) {
         Cake c = new Cake();
         System.out.println(c);
+        System.out.println(c.toString());
+
+        System.out.println(c.equals(c.toString()));//false
         CheeseCake cheeseCake = new CheeseCake();
         System.out.println(cheeseCake);
 
         Cake c2 = cheeseCake;
         System.out.println(c2); //실행이 된다면 cheeseCake나 c2나 똑같다.
-
-
     }
 }
 
-class Cake extends Object {
+class Cake {
     @Override //오버라이딩 실수 방지용, 오버라이딩이 아닐시 컴파일 에러
     public String toString() {
         return "My birthday cake";
