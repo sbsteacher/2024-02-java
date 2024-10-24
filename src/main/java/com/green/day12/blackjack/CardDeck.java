@@ -10,6 +10,7 @@ public class CardDeck {
         cards = new Card[52];
         patterns = new String[]{ "Diamond", "Heart", "Clova", "Spade" };
 
+
         //미션1
         // "", "" 값을 가지고 있는 Card객체를 52개를 만들어주시고
         // cards배열에 하나씩 넣어주세요.
@@ -30,11 +31,6 @@ public class CardDeck {
 
         //섞어주세요. (랜덤, 스와핑)
         shuffle();
-
-        //enhanced-for문으로 card객체 주소값 전부 출력
-        for(Card c : cards) {
-            System.out.println(c);
-        }
     }
 
     private void shuffle() {
@@ -48,19 +44,28 @@ public class CardDeck {
 
     //주소값 하나씩 리턴, 리턴 주소값 지워야되고, selectedIdx 이용하여 해결
     public Card draw() {
-        Card c = cards[selectedIdx];
+        if(selectedIdx == 52) {
+            return null;
+        }
+        Card tmp = cards[selectedIdx];
         cards[selectedIdx] = null;
         selectedIdx++;
-        return c;
+        return tmp;
     }
 
-    public void checkCard() {
+    public void checkCards() {
         //enhanced-for문으로 card객체 주소값 전부 출력
         for(Card c : cards) {
             System.out.println(c);
         }
     }
 
+    //n:1 > "A"
+    //n:2~10 > 그대로 문자열로 만들어서 2 > "2", 3 > "3", 10 > "10"
+    //n:11 > "J"
+    //n:12 > "Q"
+    //n:13 > "K"
+    //나머지값 > ""
     public String getDenomination(int n) {
         if(n < 1 || n > 13) {
             return "";
