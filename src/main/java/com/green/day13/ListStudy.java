@@ -26,7 +26,8 @@ public class ListStudy {
 
         ArrayList list2 = (ArrayList) list;
         list2.add(30); //2번방에 주입
-        list2.add("하하"); //3번방에 주입
+        //list2.add("하하"); //3번방에 주입
+        list2.add(11); //3번방에 주입
 
         int[] arr = new int[3];
         //arr[0] = "하하";
@@ -37,8 +38,8 @@ public class ListStudy {
         int val0 = (int)list.get(0);
         System.out.println("val0: " + val0);
 
-        //val3 = ??; // 3번 방에 있는 값 읽기
-        //System.out.println("val3: " + val3);
+        String val3 = (String)list2.get(3); // 3번 방에 있는 값 읽기
+        System.out.println("val3: " + val3);
 
         System.out.println(list);
         System.out.println(list2);
