@@ -34,6 +34,10 @@ public class ListStudy2 {
         System.out.println("list.lastIndexOf(30) : " + list.lastIndexOf(30));
         System.out.println("list.indexOf(30) : " + list.indexOf(30));
 
+        //lastIndexOf, indexOf 메소드의 리턴값이 -1이면 해당값이 콜렉션에 없음을 의미
+        System.out.println("list.lastIndexOf(100) : " + list.lastIndexOf(100));
+        System.out.println("list.indexOf(100) : " + list.indexOf(100));
+
         list.clear();
         System.out.println(list);
         System.out.println(list.size());
