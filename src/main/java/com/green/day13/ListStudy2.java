@@ -28,7 +28,6 @@ public class ListStudy2 {
         System.out.println(list);
         System.out.println(list.size());
 
-
         list.add(0, 30);
         System.out.println(list);
         System.out.println("list.lastIndexOf(30) : " + list.lastIndexOf(30));

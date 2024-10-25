@@ -1,6 +1,7 @@
 package com.green.day13;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class ListStudy {
@@ -26,11 +27,15 @@ public class ListStudy {
 
         ArrayList list2 = (ArrayList) list;
         list2.add(30); //2번방에 주입
-        //list2.add("하하"); //3번방에 주입
-        list2.add(11); //3번방에 주입
+        list2.add("하하"); //3번방에 주입
+        list2.add(true); //3번방에 주입
+        list2.add(18.9); //3번방에 주입
+        list2.add('c'); //3번방에 주입
+        //list2.add(11); //3번방에 주입
 
         int[] arr = new int[3];
         //arr[0] = "하하";
+
         Object[] arr2 = new Object[4];
         arr2[0] = 10;
         arr2[1] = "하하";

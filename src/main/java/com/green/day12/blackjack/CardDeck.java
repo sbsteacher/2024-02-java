@@ -10,7 +10,6 @@ public class CardDeck {
         cards = new Card[52];
         patterns = new String[]{ "Diamond", "Heart", "Clova", "Spade" };
 
-
         //미션1
         // "", "" 값을 가지고 있는 Card객체를 52개를 만들어주시고
         // cards배열에 하나씩 넣어주세요.
