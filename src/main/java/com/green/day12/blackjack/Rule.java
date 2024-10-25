@@ -9,11 +9,21 @@ public class Rule {
 
         //비겼는 경우: 둘의 값이 같을 경우, 둘 다 21을 넘어선 경우
 
-//        int dealerPoint = dealer.getPoint();
-//        int gamerPoint = gamer.getPoint();
+        int dealerPoint = dealer.getPoint();
+        int gamerPoint = gamer.getPoint();
 
-        int dealerPoint = 21;
-        int gamerPoint = 18;
+        /*
+        if: 비기는 경우의 수를 전부 잡아냄. 둘의 값이 같을 경우, 둘 다 21을 넘어선 경우
+        남은 경우 수: 둘 중의 하나가 21을 넘은 경우 or 둘 다 21을 안 넘은 경우
+
+        else if: 딜러가 이긴 경우의 수를 전부 잡아냄.
+                딜러가 21을 안 넘으면서 게이머보다 점수가 많은 경우  >> 둘 다 21을 안 넘은 경우인데 딜러가 점수가 더 높음
+                게이머가 21을 넘었다면   >> 딜러는 21을 안 넘었을꺼다
+        남은 경우의 수: 게이머가 이기는 경우의 수만 남았음
+
+        else: 게이머가 이기는 경우이다.
+
+         */
 
         if((dealerPoint == gamerPoint) || (dealerPoint > MAX_POINT && gamerPoint > MAX_POINT)) {
             System.out.println("비겼습니다.");
@@ -22,6 +32,8 @@ public class Rule {
         } else {
             System.out.println("게이머 승");
         }
+
+
         System.out.println("------------");
 
         if((dealerPoint == gamerPoint) || (dealerPoint > MAX_POINT && gamerPoint > MAX_POINT)) {
