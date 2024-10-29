@@ -15,8 +15,6 @@ public class PrinterDriver3 {
         //Printable은 ColorPrintable보다 부모타입이기 때문에 담을 수 없다.
         //ColorPrintable cp = (ColorPrintable)new Prn204Drv();
         //cp.printCMYK("ddd");
-
-
     }
 }
 
