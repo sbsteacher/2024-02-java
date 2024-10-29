@@ -5,6 +5,8 @@ public class FruitAndBox {
     public static void main(String[] args) {
         //사과상자 객체화 (이름은 자유)
         //오렌지상자 객체화
+        AppleBox appleBox = new AppleBox(new Apple());
+        OrangeBox orangeBox = new OrangeBox(new Orange());
 
 
     }
