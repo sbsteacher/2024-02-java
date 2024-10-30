@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class TryWithResource {
     public static void main(String[] args) {
         Path path = Paths.get("D:/Simple.txt"); //절대경로 (full 경로)
-        try(BufferedWriter writer = Files.newBufferedWriter(path) ; Scanner scan = new Scanner(System.in)) {
+        try(BufferedWriter writer = Files.newBufferedWriter(path); Scanner scan = new Scanner(System.in)) {
             AutoCloseable auto =  writer;
             auto = scan;
             writer.write("FinallyCase");

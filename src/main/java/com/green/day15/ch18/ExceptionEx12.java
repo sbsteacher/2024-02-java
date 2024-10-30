@@ -4,7 +4,8 @@ package com.green.day15.ch18;
  */
 
 public class ExceptionEx12 {
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
+
         try {
             method1();
         } catch (Exception e) {
