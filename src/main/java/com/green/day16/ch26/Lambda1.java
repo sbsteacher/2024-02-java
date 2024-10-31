@@ -16,13 +16,12 @@ public class Lambda1 {
         System.out.println(minusCalc.calc(100, 13));
     }
 }
+@FunctionalInterface
+interface Calc {
+    int calc(int n1, int n2);
+}
 
 @FunctionalInterface
 interface PrintableVer2 {
     void print(String str);
-}
-
-@FunctionalInterface
-interface Calc {
-    int calc(int n1, int n2);
 }
