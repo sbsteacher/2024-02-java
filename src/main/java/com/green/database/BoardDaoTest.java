@@ -4,6 +4,12 @@ public class BoardDaoTest {
     public static void main(String[] args) {
         BoardDao dao = new BoardDao();
         insert(dao);
+        //delete(dao);
+    }
+
+    private static void delete(BoardDao dao) {
+        int result = dao.delBoard(2);
+        System.out.println("result: " + result);
     }
 
     private static void insert(BoardDao dao) {
