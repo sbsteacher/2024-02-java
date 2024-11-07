@@ -25,4 +25,17 @@ public class BoardDao {
         }
         return result;
     }
+
+    public int delBoard(int boardId) {
+        int result = 0;
+        String sql = " DELETE FROM board WHERE board_id = ? ";
+        try (Connection conn = MyConnection.getConn()
+             ; PreparedStatement ps = conn.prepareStatement(sql)) {
+             ps.setInt(1, boardId);
+             result = ps.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
 }
