@@ -18,7 +18,8 @@ public class BoardDaoTest {
             }
         }
         //insert(dao, board);
-        selectAll(dao);
+        //selectAll(dao);
+        selectOne(dao, 6);
         //updateDynamic(dao, board);
         //delete(dao);
     }
@@ -33,6 +34,10 @@ public class BoardDaoTest {
             System.out.println(b);
         }
         //System.out.println(list);
+    }
+    private static void selectOne(BoardDao dao, int boardId) {
+        Board board = dao.selBoardOne(boardId);
+        System.out.println(board);
     }
     private static void update(BoardDao dao, Board board) {
         int result = dao.updBoard(board);
