@@ -55,4 +55,10 @@ public class Board {
     public void setUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%d, %s, %s, %s, %s, %s"
+                , boardId, title, contents, writer, createdAt, updatedAt);
+    }
 }
