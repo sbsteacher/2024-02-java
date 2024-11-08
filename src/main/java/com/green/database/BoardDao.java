@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 //Data Access Object (DB 작업하는 객체)
 public class BoardDao {
 
+    //insert, update, delete >> 리턴값은 영향받은 행 값
+    //executeUpdate() 메소드 호출
     public int insBoard(Board board) {
         int result = 0;
         String sql = " INSERT INTO board " +
